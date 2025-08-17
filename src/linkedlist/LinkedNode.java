@@ -1,45 +1,45 @@
 package linkedlist;
 
-public class LinkedNode {
-    private String Data;
+public class LinkedNode<T> {
+    private T Data;
 
-    private LinkedNode next;
+    private LinkedNode<T> next;
 
-    private LinkedNode previous;
+    private LinkedNode<T> previous;
 
-    public LinkedNode(String data, LinkedNode next, LinkedNode previous) {
+    public LinkedNode(T data, LinkedNode<T> next, LinkedNode<T> previous) {
         Data = data;
         this.next = next;
         this.previous = previous;
     }
 
-    public LinkedNode(String data) {
+    public LinkedNode(T data) {
         Data = data;
         this.next = null;
         this.previous = null;
     }
 
-    public String getData() {
+    public T getData() {
         return Data;
     }
 
-    public void setData(String data) {
+    public void setData(T data) {
         Data = data;
     }
 
-    public LinkedNode getNext() {
+    public LinkedNode<T> getNext() {
         return next;
     }
 
-    public void setNext(LinkedNode next) {
+    public void setNext(LinkedNode<T> next) {
         this.next = next;
     }
 
-    public LinkedNode getPrevious() {
+    public LinkedNode<T> getPrevious() {
         return previous;
     }
 
-    public void setPrevious(LinkedNode previous) {
+    public void setPrevious(LinkedNode<T> previous) {
         this.previous = previous;
     }
 }
